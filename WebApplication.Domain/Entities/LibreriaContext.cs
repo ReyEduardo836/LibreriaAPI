@@ -1,12 +1,13 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using WebApplication.Domain.Interfaces;
 
 #nullable disable
 
-namespace WebApplication1.Models
+namespace WebApplication.Domain.Entities
 {
-    public partial class LibreriaContext : DbContext
+    public partial class LibreriaContext : DbContext, ILibreriaContext
     {
         public LibreriaContext()
         {

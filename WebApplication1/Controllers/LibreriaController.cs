@@ -4,7 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebApplication1.Models;
+using WebApplication.AppCore.Interfaces;
+using WebApplication.Domain.Entities;
 
 namespace WebApplication1.Controllers
 {
@@ -12,28 +13,24 @@ namespace WebApplication1.Controllers
     [ApiController]
     public class LibreriaController : ControllerBase
     {
-        private readonly LibreriaContext _context;
+        private ILibrosServices librosServices;
 
-        public LibreriaController(LibreriaContext context) => _context = context;
+        public LibreriaController(ILibrosServices context) => librosServices = context;
 
         [HttpGet]
-        //public async Task<IEnumerable<Libro>> Get()
-        //{
-        //    return await _context.Libros.ToListAsync();
-        //}
         public IEnumerable<Libro> Get()
         {
-            return _context.Libros.ToList();
+            return librosServices.GetAll();
         }
 
         [HttpGet("libro/{id}")]
-        public ActionResult<Libro> GetBookById(string id)
+        public ActionResult<Libro> GetBookById(int id)
         {
-            if (string.IsNullOrWhiteSpace(id))
+            if (id < 1)
             {
                 return BadRequest();
             }
-            Libro libro = _context.Libros.FirstOrDefault(lib => lib.Id.ToString() == id);
+            Libro libro = librosServices.FindById(id);
             if (libro == null)
             {
                 return NotFound();
@@ -48,28 +45,19 @@ namespace WebApplication1.Controllers
             {
                 return BadRequest();
             }
-            _context.Libros.Add(libro);
-            return Ok(_context.SaveChanges());
+            return Ok(librosServices.Create(libro));
         }
 
         [HttpPut("update")]
         public ActionResult<Libro> UpdateLibro(Libro libro)
         {
-            if(libro == null)
+            if (libro == null)
             {
                 return BadRequest();
             }
-
-            Libro lib = _context.Libros.Find(libro.Id);
-            if (lib == null) return BadRequest();
-
-            lib.Temas = libro.Temas;
-            lib.Editorial = libro.Editorial;
-            lib.Titulo = libro.Titulo;
-            lib.Autor = libro.Autor;
-
-            _context.Libros.Update(lib);
-            return Ok(_context.SaveChanges());
+            int lib = librosServices.Update(libro);
+            if (lib == 0) return BadRequest();
+            return Ok(lib);
         }
     }
 }

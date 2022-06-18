@@ -12,7 +12,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebApplication1.Models;
+using WebApplication.AppCore.Interfaces;
+using WebApplication.AppCore.Services;
+using WebApplication.Domain.Entities;
+using WebApplication.Domain.Interfaces;
+using WebApplication.Infraestructute.Repositories;
 
 namespace WebApplication1
 {
@@ -30,6 +34,12 @@ namespace WebApplication1
         {
             services.AddDbContext<LibreriaContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("default")));
+
+            //Dependency injection
+            services.AddScoped<ILibreriaContext, LibreriaContext>();
+            services.AddScoped<ILibrosRepository, LibrosRepository>();
+            services.AddScoped<ILibrosServices, LibrosServices>();
+            
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

@@ -67,11 +67,9 @@ C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\WebApplic
 C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\WebApplication1.dll
 C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\ref\WebApplication1.dll
 C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\WebApplication1.pdb
-C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\Humanizer.dll
 C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
 C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
@@ -119,3 +117,9 @@ C:\Users\User\Desktop\WebApplication1\WebApplication1\obj\Debug\net5.0\WebApplic
 C:\Users\User\Desktop\WebApplication1\WebApplication1\obj\Debug\net5.0\ref\WebApplication1.dll
 C:\Users\User\Desktop\WebApplication1\WebApplication1\obj\Debug\net5.0\WebApplication1.pdb
 C:\Users\User\Desktop\WebApplication1\WebApplication1\obj\Debug\net5.0\WebApplication1.genruntimeconfig.cache
+C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\WebApplication.AppCore.dll
+C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\WebApplication.Domain.dll
+C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\WebApplication.Infraestructute.dll
+C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\WebApplication.AppCore.pdb
+C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\WebApplication.Domain.pdb
+C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\WebApplication.Infraestructute.pdb

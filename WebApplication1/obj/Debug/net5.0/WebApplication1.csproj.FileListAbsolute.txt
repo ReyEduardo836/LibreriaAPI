@@ -123,3 +123,4 @@ C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\WebApplic
 C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\WebApplication.AppCore.pdb
 C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\WebApplication.Domain.pdb
 C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\WebApplication.Infraestructute.pdb
+C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\BCrypt.Net-Next.dll

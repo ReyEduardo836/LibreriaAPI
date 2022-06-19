@@ -13,9 +13,9 @@ namespace WebApplication1.Controllers
     [ApiController]
     public class LibreriaController : ControllerBase
     {
-        private ILibrosServices librosServices;
+        private ILibroService librosServices;
 
-        public LibreriaController(ILibrosServices context) => librosServices = context;
+        public LibreriaController(ILibroService context) => librosServices = context;
 
         [HttpGet]
         public IEnumerable<Libro> Get()

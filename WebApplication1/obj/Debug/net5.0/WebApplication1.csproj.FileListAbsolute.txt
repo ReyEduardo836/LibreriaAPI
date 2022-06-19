@@ -80,7 +80,6 @@ C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\Microsoft
 C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\Microsoft.OpenApi.dll
-C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -124,3 +123,4 @@ C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\WebApplic
 C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\WebApplication.Domain.pdb
 C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\WebApplication.Infraestructute.pdb
 C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\BCrypt.Net-Next.dll
+C:\Users\User\Desktop\WebApplication1\WebApplication1\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -8,7 +8,7 @@ using WebApplication.Domain.Interfaces;
 
 namespace WebApplication.Infraestructute.Repositories
 {
-    public class LibrosRepository : ILibrosRepository
+    public class LibrosRepository : ILibroRepository
     {
         private LibreriaContext context;
 
@@ -55,15 +55,7 @@ namespace WebApplication.Infraestructute.Repositories
 
         public int Update(Libro t)
         {
-            Libro lib = context.Libros.Find(t.Id);
-            if (lib == null) return 0;
-
-            lib.Temas = t.Temas;
-            lib.Editorial = t.Editorial;
-            lib.Titulo = t.Titulo;
-            lib.Autor = t.Autor;
-
-            context.Libros.Update(lib);
+            context.Libros.Update(t);
             return context.SaveChanges();
         }
     }

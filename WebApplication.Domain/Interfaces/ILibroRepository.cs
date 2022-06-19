@@ -7,7 +7,7 @@ using WebApplication.Domain.Entities;
 
 namespace WebApplication.Domain.Interfaces
 {
-    public interface ILibrosRepository : IRepository<Libro>
+    public interface ILibroRepository : IRepository<Libro>
     {
         Libro FindById(int id);
         IEnumerable<Libro> FindByName(string name);

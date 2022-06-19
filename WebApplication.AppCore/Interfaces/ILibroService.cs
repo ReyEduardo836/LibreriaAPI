@@ -7,7 +7,7 @@ using WebApplication.Domain.Entities;
 
 namespace WebApplication.AppCore.Interfaces
 {
-    public interface ILibrosServices : IServices<Libro>
+    public interface ILibroService : IServices<Libro>
     {
         Libro FindById(int id);
         IEnumerable<Libro> FindByName(string name);

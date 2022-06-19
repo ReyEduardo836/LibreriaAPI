@@ -9,10 +9,10 @@ using WebApplication.Domain.Interfaces;
 
 namespace WebApplication.AppCore.Services
 {
-    public class LibrosServices : ILibrosServices
+    public class LibroService : ILibroService
     {
-        private ILibrosRepository librosRepository;
-        public LibrosServices(ILibrosRepository librosRepository)
+        private ILibroRepository librosRepository;
+        public LibroService(ILibroRepository librosRepository)
         {
             this.librosRepository = librosRepository;
         }

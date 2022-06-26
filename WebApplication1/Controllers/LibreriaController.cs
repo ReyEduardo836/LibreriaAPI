@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -6,11 +8,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebApplication.AppCore.Interfaces;
 using WebApplication.Domain.Entities;
+using WebApplication.Domain.Constants;
 
 namespace WebApplication1.Controllers
 {
-    [Route("api/[Controller]")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Route("api/[Controller]")]
     public class LibreriaController : ControllerBase
     {
         private ILibroService librosServices;
@@ -39,6 +43,7 @@ namespace WebApplication1.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = Roles.administrador)]
         public ActionResult<Libro> AddLibro(Libro libro)
         {
             if (libro == null)
@@ -49,6 +54,7 @@ namespace WebApplication1.Controllers
         }
 
         [HttpPut("update")]
+        [Authorize(Roles = Roles.administrador)]
         public ActionResult<Libro> UpdateLibro(Libro libro)
         {
             if (libro == null)

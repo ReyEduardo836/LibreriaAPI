@@ -72,9 +72,9 @@ namespace WebApplication.AppCore.Services
             JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
             var claims = new[]
             {
-                new Claim(ClaimTypes.NameIdentifier, user.Username)
-                //new Claim(ClaimTypes.Email, user.Email),
-                //new Claim(ClaimTypes.Role, user.Role)
+                new Claim(ClaimTypes.NameIdentifier, user.Username),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.Role, user.Role.ToString())
             };
 
             JwtSecurityToken jwtSecurityToken = new JwtSecurityToken(

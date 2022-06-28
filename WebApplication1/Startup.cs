@@ -17,6 +17,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WebApplication.AppCore.Interfaces;
 using WebApplication.AppCore.Services;
+using WebApplication.Domain.Constants;
 using WebApplication.Domain.Entities;
 using WebApplication.Domain.Interfaces;
 using WebApplication.Infraestructute.Repositories;
@@ -60,8 +61,11 @@ namespace WebApplication1
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:SecretKey"]))
                 }
             );
-            services.AddAuthorization();
-            
+            services.AddAuthorization(options =>
+            { // How to use policy "LibreriaControlles.AddLibro()"
+                options.AddPolicy("AdminAccess", policy => policy.RequireRole(Roles.administrador));
+            });
+
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

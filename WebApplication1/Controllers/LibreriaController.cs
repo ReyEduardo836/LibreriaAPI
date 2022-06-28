@@ -43,7 +43,7 @@ namespace WebApplication1.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = Roles.administrador)]
+        [Authorize(Policy = "AdminAccess")]
         public ActionResult<Libro> AddLibro(Libro libro)
         {
             if (libro == null)

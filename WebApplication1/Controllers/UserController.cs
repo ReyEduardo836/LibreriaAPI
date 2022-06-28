@@ -25,7 +25,7 @@ namespace WebApplication1.Controllers
             return Ok(userService.GetAll());
         }
 
-        [HttpPost]
+        [HttpPost("create")]
         public ActionResult<User> Create(User user)
         {
             if (user == null) return BadRequest();
@@ -33,14 +33,14 @@ namespace WebApplication1.Controllers
         }
 
         [HttpPost("login")]
-        public ActionResult<string> login(string username, string password)
+        public ActionResult<string> login(Login login)
         {
-            if (string.IsNullOrWhiteSpace(username) & string.IsNullOrWhiteSpace(password)) return BadRequest();
-            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password)) return BadRequest();
+            if (string.IsNullOrWhiteSpace(login.username) & string.IsNullOrWhiteSpace(login.password)) return BadRequest("Todos los campos son obligatorios");
+            if (string.IsNullOrWhiteSpace(login.username) || string.IsNullOrWhiteSpace(login.password)) return BadRequest("Todos los campos son obligatorios");
 
             try
             {
-                return Ok(userService.Login(username, password));
+                return Ok(userService.Login(login.username, login.password));
             }
             catch (Exception)
             {
